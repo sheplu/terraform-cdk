@@ -36,8 +36,8 @@
         "integration:windows:java": "cd test && run-against-dist.bat \"npx jest --runInBand java\"",
         "integration:windows:go": "cd test && run-against-dist.bat \"npx jest --runInBand go\"",
         "release-github": "tools/release-github.sh",
-        "build-docker-jsii": "docker build -t hashicorp/jsii-terraform .",
-        "push-docker-jsii": "docker push hashicorp/jsii-terraform",
+        "build-docker-jsii": "docker build -t sheplu/jsii-terraform .",
+        "push-docker-jsii": "docker push sheplu/jsii-terraform",
         "dist-clean": "lerna run dist-clean --stream && rm -rf dist",
         "prepare": "husky install",
         "prepare-next-release": "standard-version --prerelease pre --release-as minor --skip.changelog=true --skip.commit=true",
@@ -87,9 +87,6 @@
         "prettier": "^3.5.3",
         "standard-version": "^9.5.0"
     },
-    "resolutions": {
-        "**/@types/react": "18.3.18"
-    },
     "lint-staged": {
         "**/*.{ts,tsx,js,css,md}": "prettier --write",
         "examples/**": "yarn lint:examples"
@@ -116,5 +113,5 @@
             "*.js"
         ]
     },
-    "packageManager": "yarn@1.18.0"
+    "packageManager": "yarn@1.22.1"
 }

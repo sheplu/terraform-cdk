@@ -105,7 +105,7 @@ jobs:
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
     container:
-      image: docker.mirror.hashicorp.services/hashicorp/jsii-terraform
+      image: sheplu/jsii-terraform
     env:
       CHECKPOINT_DISABLE: "1"
     timeout-minutes: 120
@@ -145,7 +145,7 @@ jobs:
       matrix:
         files: ${{fromJSON(needs.cdktfDocsMatrix.outputs.matrix)}}
     container:
-      image: docker.mirror.hashicorp.services/hashicorp/jsii-terraform
+      image: sheplu/jsii-terraform
     env:
       CHECKPOINT_DISABLE: "1"
     timeout-minutes: 360

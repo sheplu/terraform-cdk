@@ -9,7 +9,7 @@ jobs:
   depcheck:
     runs-on: ubuntu-latest
     container:
-      image: docker.mirror.hashicorp.services/hashicorp/jsii-terraform
+      image: sheplu/jsii-terraform
     env:
       CHECKPOINT_DISABLE: "1"
     timeout-minutes: 60

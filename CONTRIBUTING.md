@@ -95,10 +95,10 @@ To build and install `terraform-cdk` locally you need to install:
 - mvn
 - pipenv
 
-Alternatively you can work on the CDK from within a docker container with the image `docker.mirror.hashicorp.services/hashicorp/jsii-terraform`, e.g.:
+Alternatively you can work on the CDK from within a docker container with the image `sheplu/jsii-terraform`, e.g.:
 
 ```shell
-$ docker run -it --rm -w=/home -v (pwd):/home docker.mirror.hashicorp.services/hashicorp/jsii-terraform
+$ docker run -it --rm -w=/home -v (pwd):/home sheplu/jsii-terraform
 ```
 
 or through [Visual Studio Code Remote - Containers](https://code.visualstudio.com/docs/remote/containers).

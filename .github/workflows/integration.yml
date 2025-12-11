@@ -22,7 +22,7 @@ jobs:
     outputs:
       tests: ${{ steps.build-test-matrix.outputs.tests }}
     container:
-      image: docker.mirror.hashicorp.services/hashicorp/jsii-terraform
+      image: sheplu/jsii-terraform
     env:
       CHECKPOINT_DISABLE: "1"
     timeout-minutes: 60
@@ -94,7 +94,7 @@ jobs:
       matrix: ${{fromJSON(needs.prepare-integration-tests.outputs.tests)}}
       max-parallel: 30 # too many in parallel will give HTTP 429 errors from GH when checking out the source for example
     container:
-      image: docker.mirror.hashicorp.services/hashicorp/jsii-terraform
+      image: sheplu/jsii-terraform
     env:
       CHECKPOINT_DISABLE: "1"
       TERRAFORM_VERSION: ${{ matrix.terraform }}
